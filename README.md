@@ -27,20 +27,19 @@
     _inputAccessoryView.delegate = self;
     
     /** 点击左侧按钮后调用此方法，返回YES则隐藏键盘，NO则不隐藏键盘 */
-  - (BOOL)leftButtonDidClick:(id)textView
-  {
-      NSString *text = [textView text];
-      [textView setText:[text stringByAppendingString:@"取消 "]];
-      return YES;
-  }
-
-  /** 点击右侧按钮后触发此方法 */
-  - (BOOL)rightButtonDidClick:(id)textView
-  {
-      NSString *text = [textView text];
-      [textView setText:[text stringByAppendingString:@"完成 "]];
-      return NO;
-  }
+    - (BOOL)leftButtonDidClick:(id)textView
+    {
+        NSString *text = [textView text];
+        [textView setText:[text stringByAppendingString:@"取消 "]];
+        return YES;
+    }
+    /** 点击右侧按钮后触发此方法 */
+    - (BOOL)rightButtonDidClick:(id)textView
+    {
+        NSString *text = [textView text];
+        [textView setText:[text stringByAppendingString:@"完成 "]];
+        return NO;
+    }
     
 
 详细的示例请参考代码。 <br />
